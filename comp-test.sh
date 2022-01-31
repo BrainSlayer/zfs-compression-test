@@ -44,8 +44,11 @@ export BLOCKSIZE="128k"
 export FILESIZE="100m"
 export FILE_SIZE="100m"
 export RANDSEED=1234
+export PERF_RANDSEED=1234
 export COMPPERCENT=50
+export PERF_COMPPERCENT=50
 export COMPCHUNK=0
+export PERF_COMPCHUNK=0
 
 #ZFS Fio Customisations
 MODIFIER="--unified_rw_reporting=1"
@@ -72,7 +75,7 @@ sha256sum () {
 			sha256 "$@"
 		fi
 	else
-		/bin/sha256sum "$@"
+		sha256sum "$@"
 	fi
 }
 
